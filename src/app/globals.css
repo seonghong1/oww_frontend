@@ -12,7 +12,9 @@
 
   --color-main: rgb(121, 177, 255);
   --dark-color-main: rgb(1, 8, 19);
-  --color-gray: grey;
+  --gray: rgb(147, 147, 147);
+
+  --input-border-color: rgb(192, 192, 192);
 }
 
 html,

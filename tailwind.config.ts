@@ -1,4 +1,13 @@
 import type { Config } from "tailwindcss";
+import type { PluginCreator } from "tailwindcss/types/config";
+
+const utilitiesPlugin: PluginCreator = ({ addUtilities }) => {
+  addUtilities({
+    ".input-style": {
+      border: "1px solid var(--input-border-color);",
+    },
+  });
+};
 
 const config: Config = {
   darkMode: "class",
@@ -10,11 +19,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-
-        main: "var(--color-main)",
-        dark: "var(--dark-color-main)",
+        gray: "var(--gray)",
       },
       fontFamily: {
         "noto-200": ["var(--font-200)", "sans-serif"],
@@ -26,6 +31,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [utilitiesPlugin],
 };
 export default config;
