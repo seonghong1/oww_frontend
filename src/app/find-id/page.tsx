@@ -13,6 +13,10 @@ export default function Login() {
     setIsIdFound(!isIdFound);
   };
 
+  const goToLogin = () => {
+    router.push("/login");
+  };
+
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
       <div className="w-1/4">
@@ -44,6 +48,13 @@ export default function Login() {
             className="text-color-white rounded-md w-full bg-color-sub py-2.5 font-noto-600"
           >
             아이디 찾기
+          </button>
+          <button
+            type="button"
+            onClick={goToLogin}
+            className="text-color-white rounded-md w-full bg-color-gray py-2.5 font-noto-600"
+          >
+            뒤로가기
           </button>
         </form>
 

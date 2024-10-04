@@ -18,6 +18,10 @@ export default function Login() {
     e.preventDefault();
   };
 
+  const goToLogin = () => {
+    router.push("/login");
+  };
+
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
       <div className="w-1/4">
@@ -94,6 +98,13 @@ export default function Login() {
             </button>
           </form>
         )}
+        <button
+          type="button"
+          onClick={goToLogin}
+          className="mt-5 text-color-white rounded-md w-full bg-color-gray py-2.5 font-noto-600"
+        >
+          뒤로가기
+        </button>
       </div>
     </div>
   );
