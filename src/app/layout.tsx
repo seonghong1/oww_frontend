@@ -9,6 +9,7 @@ import {
   notoSans600,
   notoSans700,
 } from "./fonts";
+import Header from "../layouts/Header";
 
 export const metadata: Metadata = {
   title: "OWW",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${notoSans200.variable} ${notoSans300.variable} ${notoSans400.variable} ${notoSans500.variable} ${notoSans600.variable} ${notoSans700.variable}`}
       >
+        <Header></Header>
         <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
