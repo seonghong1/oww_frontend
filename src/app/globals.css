@@ -10,9 +10,10 @@
   --font-600: "Noto Sans KR SemiBold", sans-serif;
   --font-700: "Noto Sans KR Bold", sans-serif;
 
-  --color-main: rgb(121, 177, 255);
-  --dark-color-main: rgb(1, 8, 19);
-  --gray: rgb(147, 147, 147);
+  --color-main: #0064FF;
+  --color-sub: #202632;
+  --color-gray : rgb(209, 214, 220);
+  --color-white : rgb(255, 255, 255);
 
   --input-border-color: rgb(192, 192, 192);
 }

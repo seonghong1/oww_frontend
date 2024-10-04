@@ -1,10 +1,42 @@
+import { sign } from "crypto";
 import type { Config } from "tailwindcss";
 import type { PluginCreator } from "tailwindcss/types/config";
 
 const utilitiesPlugin: PluginCreator = ({ addUtilities }) => {
   addUtilities({
+    ".disabled-form": {
+      "pointer-events": "none;",
+      opacity: "0.5;",
+    },
     ".input-style": {
-      border: "1px solid var(--input-border-color);",
+      "box-shadow": "0 0 0 1px var(--input-border-color) inset",
+      "font-family": "var(--font-500)",
+      outline: "none;",
+    },
+    ".label-style": {
+      "font-family": "var(--font-600)",
+      "font-size": "0.9rem",
+      color: "var(--color-sub)",
+    },
+    ".title-h1": {
+      "font-family": "var(--font-600)",
+      "font-size": "2rem",
+    },
+    ".title-h2": {
+      "font-family": "var(--font-600)",
+      "font-size": "1.7rem",
+    },
+    ".title-h3": {
+      "font-family": "var(--font-500)",
+      "font-size": "1.4rem",
+    },
+    ".title-h4": {
+      "font-family": "var(--font-500)",
+      "font-size": "1.2rem",
+    },
+    ".title-h5": {
+      "font-family": "var(--font-500)",
+      "font-size": "1rem",
     },
   });
 };
@@ -19,7 +51,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gray: "var(--gray)",
+        "color-main": "var(--color-main)",
+        "color-sub": "var(--color-sub)",
+        "color-gray": "var(--color-gray)",
+        "color-white": "var(--color-white)",
       },
       fontFamily: {
         "noto-200": ["var(--font-200)", "sans-serif"],
